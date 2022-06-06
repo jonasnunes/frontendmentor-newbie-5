@@ -7,3 +7,58 @@
     box-sizing: border-box
     list-style: none
     text-decoration: none
+
+body
+    @include mixins.flex
+    background-color: variables.$bg-main
+
+.main
+    width: 350px
+    background-color: variables.$bg-card
+    display: flex
+    flex-direction: column
+    border-radius: .7rem
+    margin-block: 2rem
+
+    &-header img
+        border-radius: .7rem .7rem 0 0
+
+    &-container
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        text-align: center
+        padding: 2.3rem 1.2rem
+
+        &-section-1
+            font-family: variables.$font-inter
+
+            h1
+                font-size: 2rem
+                padding-bottom: 1rem
+                color: #fff
+            
+                span
+                    color: variables.$soft-violet
+
+            p
+                line-height: 200%
+                color: variables.$main-paragraph
+        
+        &-section-2 
+            display: flex
+            flex-direction: column
+            gap: 2rem
+
+            .cards
+                font-family: variables.$font-lexend
+                line-height: 200%
+
+                h2
+                    color: #fff
+                    font-size: 1.8rem
+                
+                p
+                    color: variables.$main-paragraph
+                    text-transform: uppercase
+                    font-size: .8rem
