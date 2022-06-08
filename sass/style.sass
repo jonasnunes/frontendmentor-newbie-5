@@ -20,8 +20,34 @@ body
     border-radius: .7rem
     margin-block: 2rem
 
+    @include mixins.quebra1 
+        width: 748px
+    
+    @include mixins.quebra2 
+        width: 1230px
+        height: 560px
+        position: relative
+    
+    @include mixins.quebra3 
+        width: 100%
+        border-radius: 0
+
     &-header img
         border-radius: .7rem .7rem 0 0
+
+        @include mixins.quebra1 
+            width: 748px
+            height: 400px
+
+        @include mixins.quebra2 
+            float: right
+            width: 50%
+            height: 560px
+            border-radius: 0 .7rem .7rem 0
+        
+        @include mixins.quebra3 
+            border-radius: 0
+            width: 100%
 
     &-container
         display: flex
@@ -30,8 +56,20 @@ body
         text-align: center
         padding: 2.3rem 1.2rem
 
+        @include mixins.quebra2 
+            float: left
+            width: 50%
+            position: absolute
+
         &-section-1
             font-family: variables.$font-inter
+
+            @include mixins.quebra1 
+                width: 70%
+                margin: auto
+
+            @include mixins.quebra2 
+                width: 85%
 
             h1
                 font-size: 2rem

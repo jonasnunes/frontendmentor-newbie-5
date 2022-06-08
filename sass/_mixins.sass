@@ -2,3 +2,15 @@
     display: flex
     justify-content: center
     align-items: center
+
+@mixin quebra1
+    @media(min-width: 768px)
+        @content
+
+@mixin quebra2 
+    @media(min-width: 1250px)
+        @content
+
+@mixin quebra3
+    @media(max-width: 375px)
+        @content
